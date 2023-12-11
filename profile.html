@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My Awesome Website
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Signika+Negative:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo"><img src="addulogo.png"></a>
+        <ul class="navlist">
+            <li><a href="profile.html" class="active">Profile</a></li>
+            <li><a href="activities.html">Activities</a></li>
+        </ul>
+    </header>
+
+    <div id="welcome-message">
+        <h1>Welcome to my profile</h1>
+    </div>
+    
+    <div class="scroll-down" id="scrollDown">
+        <p class="scrolltext">Scroll Down</p>
+        <div><img src="down-arrow-56.png" class="arrow"></div>
+    </div>
+
+    <div class="paralax">
+        <div class="paralax-item p-item1"></div>
+        <div class="paralax-item p-item2"></div>
+        <div class="paralax-item p-item3"></div>
+        <div class="paralax-item p-item4"></div>
+    </div>
+
+    <section class="parallax-home">
+        <img src="Home-Images/sky.png" id="sky">
+        <img src="Home-Images/star1.png" id="sky">
+        <img src="Home-Images/moon.png" id="moon">
+        <!-- <img src="Home-Images/water.png" id="water">
+        <img src="Home-Images/center-city.png" id="center-city"> -->
+        <img src="Home-Images/main-city3.png" id="right-city">
+        <img src="Home-Images/right-city.png" id="right-city">
+        <img src="Home-Images/left-city.png" id="left-city">
+        <img src="Home-Images/train.png" id="train">
+        <img src="Home-Images/rail.png" id="rail">
+        <img src="me.png" id="me" class="me">
+        <img src="Home-Images/hill-left-1.png" id="hill-left-1">
+        <img src="Home-Images/hill-right-1.png" id="hill-right-1">
+    </section>
+
+    <section class="about" id="about">
+        <div class="info-box">
+            <h2>About Me</h2>
+            <p>Greetings, I'm Gabriel Achilles Sabado, though most know me as Troy. The moniker draws inspiration from the legendary tales of Troy and Achilles in Greek mythology. Just as Achilles was a formidable warrior, my family playfully associate the name with my strength and resilience, creating a connection between the mythical hero and the qualities they see in me.
+            </p>
+            <a href="profile.html#readmore" class="btn">Read More!</a>
+        </div>
+
+        <img src="About-Images/waterfall.png" id="waterfall" class="about-waterfall">
+        <img src="About-Images/desert-sky.png">
+        <img src="About-Images/desert-moon.png" id="desert-moon">
+        <img src="About-Images/desert-NoSky.png">
+        <img src="About-Images/desert-rock.png">
+        <img src="About-Images/water.png">
+        <img src="About-Images/man.png" id="man">
+        <img src="About-Images/grass.png">
+
+        <div id="progress">
+            <span id="progrss-value">
+                <i class="bx bx-chevrons-up"></i>
+            </span>
+        </div>
+    </section>
+
+    <section class="activities" id="activities">
+        <h2>Outputs</h2>
+        <div class="act-card">
+            <div class="card">
+                <img src="products/1.png">
+                <div class="info">
+                    <div class="price-name">
+                        <h3>Simple Computations</h3>
+                        <span>1</span>
+                    </div>
+                    <p>Write a simple JavaScript program (in 1 HTML document file) that will ask for input values and convert into the following:
+                        Fahrenheit to Celsius <br> Celsius to Fahrenheit <br> Meters to Feet <br> Feet to Meters
+                    </p>
+                 <a href="activities.html#one" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="products/2.png">
+                <div class="info">
+                    <div class="price-name">
+                        <h3>Income Tax Calculator</h3>
+                        <span>2</span>
+                    </div>
+                    <p>Input the Taxable Income and Compute the income tax <br>
+                       Please utilize the table provided on the daigler website<br>
+                       Note: Do not use prompts for user inputs. <br>Use the HTML input tag. 
+                       <br>Income Tax = Basic tax + Rate
+                    </p>
+                 <a href="activities.html#two" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="products/3.png">
+                <div class="info">
+                    <div class="price-name">
+                        <h3>Nth Factorial, Sum and Average</h3>
+                        <span>3</span>
+                    </div>
+                    <p>Write a Javascript Program (1 HTML File) that will input an integer value n and display (upon a button click) the following:
+                        The nth factorial (Using a While Loop), The sum of the first n numbers (Using a Do While Loop), The Average of the first n numbers (Using a For Loop)
+                    </p>
+                 <a href="activities.html#three" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="products/4.png">
+                <div class="info">
+                    <div class="price-name">
+                        <h3>Simple Payroll</h3>
+                        <span>4</span>
+                    </div>
+                    <p>Write a Javascript Program to Add, Delete employees in a payroll list.
+                        The payroll program should input the following: <br>
+                        Employee Name <br> Days Worked <br> Daily Rate <br> Deduction Amount
+                    </p>
+                 <a href="activities.html#four" class="btn">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <div class="left-column">
+            <div class="switch">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+
+            <h1>About Me</h1>
+            <img src="side1.jpg" class="sidepic">
+            <div class="aboutme">
+                <p>Name: Gabriel Achilles Sabado
+                <br>
+                Nickname: Troy
+                <br>
+                Birthdate: February 9, 2005
+                <br>
+                Zodiac Sign: Aquarius
+                <br>
+                </p>
+            </div>        
+            <div class="indented-text">
+                <p>Aquarius Traits:</p>
+                <ul>
+                <li>Innovative and forward-thinking</li>
+                <li>Open-minded and humanitarian</li>
+                <li>Independent and curious</li>
+                <li>Values diverse perspectives</li>
+                <li>Social and outgoing</li>
+                <li>Embraces individuality</li>
+                <li>Sees challenges as opportunities for growth</li>
+                </ul>
+            </div>
+            <img src="side2.jpg" class="sidepic">
+        </div>
+
+        <div class="main">
+            <div class="readmore" id="readmore">  
+               
+                <h1>Creative Passion</h1>
+                <div class="landscape-container">
+                    <img src="main.jpeg" alt="Portrait Image" class="landscape-image">
+                </div>
+                <p>Embarking on a seven-year journey in the realm of journalism has been an exhilarating experience, marked by a deep dive into collaborative writing and desktop publishing within the dynamic field of photojournalism. Throughout this odyssey, I've honed my storytelling craft through the lens of a camera, capturing moments that resonate with emotion and significance. Amidst the hustle and bustle of newsrooms, I discovered the transformative power of Photoshop, a tool that became a gateway to unlocking my passion for the arts. Manipulating images, enhancing narratives, and seamlessly blending elements have become second nature, as my journey unfolded not only as a journalist but also as a visual storyteller.</p>
+                <p>Beyond the pixels and headlines, my creative spirit extends into the realm of digital artistry. Armed with a palette of digital brushes and a profound understanding of Photoshop, my skills in painting have flourished. From sweeping landscapes that evoke a sense of wanderlust to intimate portraitures that capture the essence of a subject, my artistic pursuits transcend traditional boundaries. Engaging in visual arts has become an integral part of my identity, allowing me to express ideas, emotions, and perspectives in ways that words alone cannot capture. With each stroke and click, my creative journey continues to evolve, blending the worlds of journalism and artistry into a harmonious symphony of storytelling.</p>
+                
+                <h1>Skills</h1>
+                <div class="fakeimg" style="height:200px;">
+                    <h1>photoshop</h1>
+                    <h1>photography</h1>
+                    <h1>html</h1>
+                    <h1>css</h1>
+                </div>
+
+            </div>
+
+            <div class="self-reflection">
+                <p class="self-reflection">Self Reflection</p>
+                <p class="self-reflection">In the process of tackling various challenges and exploring new opportunities, I've come to appreciate the value of resilience and adaptability. Reflecting on my experiences, I recognize the significance of learning from both successes and setbacks. Each encounter, whether positive or challenging, has contributed to my personal and professional growth. I've learned to embrace change, cultivate a proactive mindset, and refine my problem-solving skills. Additionally, collaborating with diverse individuals has broadened my perspectives and enhanced my ability to work effectively in a team. As I continue on this journey of self-discovery and improvement, I am committed to remaining open-minded, curious, and dedicated to continual learning.</p>
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            
+            <div class="box1">
+                <div class="player">
+
+                    <div class="player-top">
+                        <button class="player-btn" type="button">
+                          <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <span>Play Some Music</span>
+                        <button class="player-btn" type="button">
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="player-body">
+                      <div class="current-song">
+                        <div class="cover">
+                          <span>Metallica</span>
+                          <span>Nothing Else Matters</span>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="song-info">
+                      <div class="song-details">
+                        <span class="song-name">Nothing Else Matters</span>
+                        <span class="song-artist">Metallica</span>
+                      </div>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+            
+                    <div class="song-duration">
+            
+                      <div class="song-time">
+                        <div class="song-progress">
+                          <audio src="music/song1.mp3" class="audio"></audio>
+                        </div>
+                      </div>
+            
+                      <div class="time">
+                        <span>0:00</span>
+                        <span>0:00</span>
+                      </div>
+            
+                    </div>
+            
+                    <div class="controls">
+                      <button class="player-btn" type="button">
+                        <i class="fa-solid fa-shuffle"></i>
+                      </button>
+                      <button class="player-btn prev-btn" type="button">
+                        <i class="fa-solid fa-backward"></i>
+                      </button>
+                      <button class="player-btn play-pause" type="button">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                      <button class="player-btn next-btn" type="button">
+                        <i class="fa-solid fa-forward"></i>
+                      </button>
+                      <button class="player-btn" type="button">
+                        <i class="fa-solid fa-repeat"></i>
+                      </button>
+                    </div>
+            
+                    <div class="player-footer">
+                      <i class="fa-sharp fa-solid fa-music"></i>
+                      <span>Listen to Music</span>
+                      <i class="fa-sharp fa-solid fa-list"></i>
+                    </div>
+            
+                </div>
+            </div>
+
+            <h1>Inspirational Quotes</h1>
+            <div class="box2">
+                <h1>"Believe you can, and you're halfway there." <br>Theodore Roosevelt</h1>
+                <h1>"The only way to do great work is to love what you do." <br>Steve Jobs</h1>
+                <h1>"Dream big,<br> work hard,<br> stay focused."</h1>
+                <h1>"Success is not final, failure is not fatal: It is the courage to continue that counts." <br> Winston Churchill</h1>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+        
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+            else {        document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'darl');
+            }    
+        }
+        
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+</body>
+</html>

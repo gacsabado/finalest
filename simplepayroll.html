@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management</title>
+    <link rel="stylesheet" href="navforjs.css">
+    <link rel="stylesheet" href="sidenav.css">
+    <link rel="stylesheet" href="simplepayroll.css">
+</head>
+<body>
+    <!-- Modal for deleting all inputs -->
+    <div id="deleteAllModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Are you sure you want to delete all inputs?</p>
+            <button onclick="deleteAllInputs()">Delete All</button>
+        </div>
+    </div>
+
+    <header id="header">
+        <a href="index.html" class="logo"><img src="addulogo.png"></a>
+        <ul class="navlist">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </header>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="sabadocelsius.html" id="sabadocelsius">Simple Computations in Javascript</a>
+        <a href="tax.html" id="tax">Income Tax Calculator Program</a>
+        <a href="integervalue.html" id="integervalue">Nth Factorial, Sum and Average</a>
+        <a href="simplepayroll.html" id="payroll">Simple Payroll</a>
+      </div>
+    
+    <div class="container">
+        <div class="con1">
+            <div class="pform">
+                <h2>Payroll Management</h2>
+                <form id="payrollForm">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" id="employeeName" required>
+                    
+                    <label for="daysWorked">Days Worked:</label>
+                    <input type="number" id="daysWorked" required>
+                    
+                    <label for="dailyRate">Daily Rate:</label>
+                    <input type="number" id="dailyRate" required>
+                    
+                    <label for="deductionAmount">Deduction Amount:</label>
+                    <input type="number" id="deductionAmount" required>
+                    
+                    <button type="button" onclick="addEmployee()">Add Employee</button>
+                </form>
+            </div>
+        </div>
+       
+        <div class="con2">
+            <h2>Payroll Table</h2>
+            <button onclick="openModal()">Delete All Inputs</button>
+            <table id="payrollTable">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Employee Name</th>
+                        <th>Days Worked</th>
+                        <th>Daily Rate</th>
+                        <th>Gross Pay</th>
+                        <th>Deduction Amount</th>
+                        <th>Net Pay</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="payrollBody">
+                    <!-- Payroll entries will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+   
+    <script>
+        let payrollList = [];
+
+        function addEmployee() {
+            const employeeName = document.getElementById('employeeName').value;
+            const daysWorked = parseFloat(document.getElementById('daysWorked').value);
+            const dailyRate = parseFloat(document.getElementById('dailyRate').value);
+            const deductionAmount = parseFloat(document.getElementById('deductionAmount').value);
+
+            const grossPay = daysWorked * dailyRate;
+            const netPay = grossPay - deductionAmount;
+
+            const payrollEntry = {
+                employeeName,
+                daysWorked,
+                dailyRate,
+                grossPay,
+                deductionAmount,
+                netPay
+            };
+
+            payrollList.push(payrollEntry);
+            updateTable();
+        }
+
+        function deleteEmployee(index) {
+            payrollList.splice(index, 1);
+            updateTable();
+        }
+
+        function updateTable() {
+            const tableBody = document.getElementById('payrollBody');
+            tableBody.innerHTML = '';
+
+            payrollList.forEach((entry, index) => {
+                const row = tableBody.insertRow();
+                const cellNo = row.insertCell(0);
+                const cellName = row.insertCell(1);
+                const cellDaysWorked = row.insertCell(2);
+                const cellDailyRate = row.insertCell(3);
+                const cellGrossPay = row.insertCell(4);
+                const cellDeductionAmount = row.insertCell(5);
+                const cellNetPay = row.insertCell(6);
+                const cellAction = row.insertCell(7);
+
+                cellNo.textContent = index + 1;
+                cellName.textContent = entry.employeeName;
+                cellDaysWorked.textContent = entry.daysWorked;
+                cellDailyRate.textContent = entry.dailyRate;
+                cellGrossPay.textContent = entry.grossPay;
+                cellDeductionAmount.textContent = entry.deductionAmount;
+                cellNetPay.textContent = entry.netPay;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => deleteEmployee(index);
+                cellAction.appendChild(deleteButton);
+            });
+        }
+
+        // Function to open the delete all inputs modal
+        function openModal() {
+            const modal = document.getElementById('deleteAllModal');
+            modal.style.display = 'block';
+        }
+
+        // Function to close the delete all inputs modal
+        function closeModal() {
+            const modal = document.getElementById('deleteAllModal');
+            modal.style.display = 'none';
+        }
+
+        // Function to delete all inputs
+        function deleteAllInputs() {
+            payrollList = []; // Clear the array
+            updateTable(); // Update the table to reflect the changes
+            closeModal(); // Close the modal after deletion
+        }
+
+    </script>
+
+</body>
+</html>

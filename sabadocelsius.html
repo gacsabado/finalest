@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unit Converter</title>
+        <link rel="stylesheet" href="navforjs.css">
+        <link rel="stylesheet" href="sidenav.css">
+        <link rel="stylesheet" href="sabadocelsius.css">
+    </head>
+<body>
+    <header id="header">
+        <a href="index.html" class="logo"><img src="addulogo.png"></a>
+        <ul class="navlist">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="activities.html">Activities</a></li>
+        </ul>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="sabadocelsius.html" id="sabadocelsius">Simple Computations in Javascript</a>
+        <a href="tax.html" id="tax">Income Tax Calculator Program</a>
+        <a href="integervalue.html" id="integervalue">Nth Factorial, Sum and Average</a>
+        <a href="simplepayroll.html" id="payroll">Simple Payroll</a>
+    </div>
+
+    <div id="converter-container">
+        <h1>Converter</h1>
+        <div id="input-value">
+            <label for="value">Enter the value to convert:</label>
+            <input type="text" id="value" placeholder="Enter value" />
+        </div>
+
+        <div id="tabs">
+            <button class="tab" onclick="selectTab(1)">F to C</button>
+            <button class="tab" onclick="selectTab(2)">C to F</button>
+            <button class="tab" onclick="selectTab(3)">M to Ft</button>
+            <button class="tab" onclick="selectTab(4)">Ft to M</button>
+        </div>
+
+        <div id="result-container"></div>
+    </div>
+
+    <script>
+        function selectTab(option) {
+            // Implement the logic to handle the selected tab
+            console.log("Selected option: " + option);
+            // Call the conversion function based on the selected option
+            convertUnits(option);
+        }
+
+        function convertUnits(option) {
+            // Get the input value
+            const inputValue = document.getElementById("value").value;
+            if (inputValue === "" || isNaN(inputValue)) {
+                alert("Invalid input. Please enter a valid number.");
+                return;
+            }
+
+            // Perform the conversion based on the selected option
+            let resultMessage = "";
+            switch (option) {
+                case 1:
+                    resultMessage = convertFahrenheitToCelsius(inputValue);
+                    break;
+                case 2:
+                    resultMessage = convertCelsiusToFahrenheit(inputValue);
+                    break;
+                case 3:
+                    resultMessage = convertMetersToFeet(inputValue);
+                    break;
+                case 4:
+                    resultMessage = convertFeetToMeters(inputValue);
+                    break;
+                default:
+                    resultMessage = "Invalid option. Please select a valid conversion option.";
+            }
+
+            // Display the result in the result container
+            displayResult(resultMessage);
+        }
+
+        function convertFahrenheitToCelsius(fahrenheit) {
+            const celsius = (fahrenheit - 32) * (5 / 9);
+            return `${fahrenheit} Fahrenheit is equal to ${celsius.toFixed(2)} Celsius.`;
+        }
+
+        function convertCelsiusToFahrenheit(celsius) {
+            const fahrenheit = (celsius * 9 / 5) + 32;
+            return `${celsius} Celsius is equal to ${fahrenheit.toFixed(2)} Fahrenheit.`;
+        }
+
+        function convertMetersToFeet(meters) {
+            const feet = meters * 3.28084;
+            return `${meters} Meters is equal to ${feet.toFixed(2)} Feet.`;
+        }
+
+        function convertFeetToMeters(feet) {
+            const meters = feet / 3.28084;
+            return `${feet} Feet is equal to ${meters.toFixed(2)} Meters.`;
+        }
+
+        function displayResult(message) {
+            // Update the result container with the new result
+            const resultContainer = document.getElementById("result-container");
+            resultContainer.innerHTML = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    height: .1rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #67ccff;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #194eb9;
+    border-radius: 5rem;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #1d002c;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header{
+    padding: 25px 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1002;
+    transition: top 1s;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #12f7ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform .3s;
+}
+
+.logo img{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+
+.logo:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+ul.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.navlist li{
+    margin-left: 1rem;
+}
+
+.navlist li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 12px;
+    border: 2px solid  #12f7ff;
+    border-radius: 24px;
+    transition: all .3 ease;
+}
+
+.navlist li a:hover, .navlist li a.active{
+    box-shadow: 0 0 1rem #12f7ff;
+    background: #12f7ff;
+    color: #1d002c;
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Add transition property for opacity */
+    z-index: 10;
+    color: #fff;
+    font-size: 30px;
+    animation: bounce 2s infinite;
+    z-index: 1002;
+}
+
+.scrolltext {
+    margin-left: -5%;
+    margin-bottom: -3%;
+    font-size: 20px;
+}
+
+.arrow {
+    width: 10%;
+    align-self: center;
+}
+
+.hide-scroll-down {
+    opacity: 0; /* No need for "px" here */
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Add transition for .scrolltext and .arrow */
+.scroll-down .scrolltext,
+.scroll-down .arrow {
+    transition: opacity 0.5s ease;
+}
+
+/* Paralax a */
+/* Paralax a */
+/* Paralax a */
+/* Paralax a */
+/* Paralax a */
+#welcome-message {
+    position: fixed;
+    top: 53%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1001; /* Set a higher z-index value to ensure it appears on top */
+    font-size: 25px;
+    text-align: center;
+}
+  
+#welcome-message h1{
+    font-family: 'Moonlight Sonata';
+    font-size: 110px;
+    color: #12f7ff;
+    text-shadow: 4px 4px 0px #1d002c;
+}
+  
+#welcome-message.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+  
+@font-face {
+    font-family: 'Moonlight Sonata';
+    src: url('MoonlightSonata-axrmx.ttf') format('truetype');
+}
+
+.paralax{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.paralax-item{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.p-item3{
+    background: url(m_3.png) bottom/100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1001;
+}
+
+.p-item4{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url("m_4.png") repeat-x;
+    background-size: cover;
+    background-position: center;
+    animation: marquee 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translate3d(100%,0,0);
+    }
+
+    100%{
+        transform: translate3d(-100vw,0,0);
+    }
+}
+
+/* Paralax a END */
+/* Paralax a END */
+/* Paralax a END */
+/* Paralax a END */
+/* Paralax a END */
+/*---------- ---------- ----------Paralax b ---------- ---------- ---------- */
+/*---------- ---------- ----------Paralax b ---------- ---------- ---------- */
+/*---------- ---------- ----------Paralax b ---------- ---------- ---------- */
+section{
+    min-height: 100vh;
+}
+
+.parallax-home{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 999; */
+}
+
+.parallax-home img{
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 100vw;
+}
+
+/* .parallax-home #text{
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 0 10px 4px rgba(0,0,0,0.85);
+    top: 80%;
+    left:50%;
+} */
+
+.parallax-home img#sky{
+    z-index: 0;
+}
+
+.parallax-home img#moon, .about img#desert-moon{
+    mix-blend-mode: screen;
+}
+
+.parallax-home img#water{
+    z-index: 0;
+}
+.parallax-home img#main-city{
+    width: 1080px;
+    z-index: 0;
+}
+.parallax-home img#right-city{
+    z-index: 1;
+}
+.parallax-home img#left-city{
+    z-index: 1;
+}
+.parallax-home img#train{
+    z-index: 3;
+}
+.parallax-home img#rail{
+    z-index: 3;
+}
+.parallax-home img#me{
+    width: 500px;
+    height: auto;
+    top: 80%;
+    left: 50%;
+    z-index: 3
+}
+.parallax-home img#hill-left-1{
+    z-index: 4;
+}
+.parallax-home img#hill-right-1{
+    z-index: 4;
+}
+
+.about{
+    position: relative;
+}
+.about img{
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+    width: 100vw;
+}
+
+.about img.about-waterfall{
+    position: absolute;
+    top: -95px;
+}
+
+.about .info-box{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 52%;
+    z-index: 1001;
+    background: #1d002c;
+    padding: 40px;
+}
+
+.about .info-box h2{
+    font-size: 2.5rem;
+}
+
+.about .info-box p{
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+.btn{
+    background: #12f7ff;
+    color: #1d002c;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: .5rem 1rem;
+    transition: all .3 ease;
+    border: 2px solid #12f7ff;
+    font-weight: 500;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1rem #12f7ff;
+    background: #1d002c;
+    color: #12f7ff;
+}
+
+.activities{
+    background: #1d002c;
+    padding: 3rem 10%;
+}
+
+.activities h2{
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.act-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+    border: 2px solid #12f7ff;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    transition: all .4s ease;
+    z-index: 1003;
+}
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-7px);
+    background-color: #12f7ff;
+    color: #1d002c;
+}
+
+.card img{
+    width:150px;
+    height: 150px;   
+    margin-top: -4rem;
+    filter: drop-shadow(0 0 0.5rem #1797ff);
+}
+
+.card .price-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width for consistency */
+}
+
+.info{
+    padding-bottom: .5rem;
+    text-align: center; /* Center text within the card */
+}
+
+.info p{
+    /* padding: .5rem 0 1.5rem 0; */
+    padding: 0.5rem 0;
+}
+
+.info .btn{
+    display: block;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 0.5rem #1d002c;
+}
+
+.price-name span{
+    color: #04cf37;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+/*---------- ---------- ----------Paralax b END ---------- ---------- ---------- */
+/*---------- ---------- ----------Paralax b END ---------- ---------- ---------- */
+/*---------- ---------- ----------Paralax b END ---------- ---------- ---------- */
+/*---------- DARK MODE ----------*/
+/*---------- DARK MODE ----------*/
+/*---------- DARK MODE ----------*/
+
+:root {
+    --font-color: #12f7ff;
+   --bg-color: #1e1e1e;
+   --box-color: #32163f;
+}
+ 
+[data-theme="light"] {
+   --font-color: #1d002c;
+   --bg-color: white;
+   --box-color: #12f7ff;
+}
+ 
+.switch {
+   height: 100px;
+   right: 50px;
+   top: 50px;
+   z-index: 10000;
+}
+   
+.theme-switch {
+ display: inline-block;
+ height: 34px;
+ position: relative;
+ width: 60px;
+}
+ 
+.theme-switch input {
+ display:none;
+}
+ 
+.slider {
+ background-color:  #1d002c;;
+ /* border: 3px solid #1d002c; */
+ bottom: 0;
+ cursor: pointer;
+ left: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ transition: .4s;
+}
+ 
+.slider:before {
+ background-color: #fff;
+ bottom: 4px;
+ content: "";
+ height: 26px;
+ left: 4px;
+ position: absolute;
+ transition: .4s;
+ width: 26px;
+ z-index: 10000;
+}
+ 
+input:checked + .slider {
+ background-color: #12f7ff;
+ /* border: 3px solid #1d002c; */
+}
+ 
+input:checked + .slider:before {
+ transform: translateX(26px);
+}
+ 
+.slider.round {
+ border-radius: 34px;
+}
+ 
+.slider.round:before {
+ border-radius: 50%;
+}
+ 
+/*---------- DARK MODE END ----------*/
+/*---------- DARK MODE END ----------*/
+/*---------- DARK MODE END ----------*/
+
+/* ---------- ---------- ---------- CONTAINER ---------- ---------- ---------- */
+/* ---------- ---------- ---------- CONTAINER ---------- ---------- ---------- */
+/* ---------- ---------- ---------- CONTAINER ---------- ---------- ---------- */
+/* ---------- ---------- ---------- CONTAINER ---------- ---------- ---------- */
+/* ---------- ---------- ---------- CONTAINER ---------- ---------- ---------- */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.left-column, .main {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-column {
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 26%, #FFCC70 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white; /* Set the text color for the left column */
+    margin-left: 5vw;
+}
+
+.left-column h1{
+    margin-top: -17%;
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0.5);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.left-column p{
+    margin: 10px;
+    color: none;
+    color: var(--font-color);
+}
+  
+.aboutme{
+    background: none;
+    background-color: var(--box-color);
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    padding: 10px;
+}
+  
+.indented-text{
+    margin-top: 10px;
+    background: none;
+    background-color: var(--box-color);
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.indented-text ul {
+    color: none;
+    color: var(--font-color);
+    list-style-type: none;
+    padding-left: 40px; /* Adjust the value according to your preference */
+}
+  
+.indented-text li {
+    color: none;
+    color: var(--font-color);
+    margin-bottom: 5px; /* Optional: Adds some space between the list items */
+}
+  
+.sidepic{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    flex: 70%;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.main h1{
+    color: none;
+    color: var(--font-color);
+}
+  
+.main p{
+    margin:10px;
+    padding-left: 10px;
+    padding: 10px;
+    color: none;
+    color: var(--font-color);
+    background: none;
+    background-color: var(--box-color);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    max-width: 900px;
+}
+
+.landscape-container {
+    width: 100vw; /* Set the desired width for the landscape container */
+    height: 500px; /* Set the desired height for the landscape container */
+    overflow: hidden;
+    border-radius: 20px;
+    max-width: 900px;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, 0%);
+}
+  
+.landscape-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* This will crop the image to cover the container */
+    
+}
+
+.readmore h1{
+    text-align: left;
+    color: white;
+}
+
+.readmore .fakeimg{
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, 10%);
+}
+
+.fakeimg {
+    background: linear-gradient(
+      to right, #4158D0 0%, 
+      #C850C0 20%, #eaa82f 100%);
+    background-size: 200% 200% ;
+    animation: animate-bg 5s infinite ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;  
+    position: relative;
+}
+
+@keyframes animate-bg{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+}
+  
+.fakeimg h1 {
+    color: white;
+    font-family: 'Moonlight Sonata';
+    font-size: 2em;
+    opacity: 0;
+    animation: fadeInOut 20s linear infinite;
+    position: absolute;
+}
+  
+.fakeimg h1:nth-child(1) {
+    animation-delay: -15s;
+}
+  
+.fakeimg h1:nth-child(2) {
+    animation-delay: 0s; /* Adjusted delay to create a sequence */
+}
+  
+.fakeimg h1:nth-child(3) {
+    animation-delay: 10s; /* Adjusted delay to create a sequence */
+}
+  
+.fakeimg h1:nth-child(4) {
+    animation-delay: 15s; /* Adjusted delay to create a sequence */
+}
+  
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10%, 25% {
+      opacity: 1;
+    }
+    35%, 100% {
+      opacity: 0;
+    }
+}
+
+.self-reflection {
+    margin: 5% auto; /* Center the element horizontally and provide top margin */
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+  
+.self-reflection p {
+    margin: 5px;
+    font-size: 16px;
+    color: var(--font-color);
+}
+  
+.self-reflection p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.right-column{
+    margin-right:5vw;
+}
+
+/* ---------- ---------- ---------- ---------- MUSIC PLAYER ---------- ---------- ---------- ---------- */
+.right-column .box1{
+    background: linear-gradient(
+        45deg, #4158D0 0%, 
+        #C850C0 20%, #eaa82f 100%);
+    background-size: 200% 200% ;
+    animation: animate-bg 5s infinite ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white; /* Set the text color for the left column */
+    width: 30rem;
+    height: 45rem;
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+    border-radius: 3rem;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player {
+    width: 30rem;
+    height: 45rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+  
+.player-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.player-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.1);
+    background-color: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a8a9ab;
+    box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.5),
+      -0.4rem -0.4rem 2rem -0.1rem rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    z-index: 1005;
+}
+
+.player-top span {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+/* disc */
+.player-body {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.current-song {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 0.5rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0.6rem 0.6rem 4rem -0.1rem rgba(0, 0, 0, 0.9),
+      -0.6rem -0.6rem 4rem -0.1rem rgba(255, 255, 255, 0.4);
+    transform: rotateZ(-15deg);
+    position: relative;
+}
+  
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border-radius: 50%;
+}
+  
+@keyframes coverRotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+.rotate {
+    animation: coverRotate 10s linear infinite;
+}
+  
+.cover span {
+    font-family: "Delicious Handrawn", cursive;
+    position: absolute;
+    display: block;
+}
+  
+.cover span:nth-child(1) {
+    color: #ddd;
+    top: 10%;
+    left: 30%;
+    font-size: 1.6rem;
+}
+  
+.cover span:nth-child(2) {
+    width: 10rem;
+    color: #fff;
+    top: 20%;
+    left: 20%;
+    font-size: 2.5rem;
+    text-align: center;
+}
+/* disc end */
+
+.song-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+  
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+  
+.song-name {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+}
+  
+.song-artist {
+    font-size: 1rem;
+    color: #a8a9ab;
+}
+
+/* heart */
+.song-info i {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #09c275, #70e078);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+.song-time {
+    width: 100%;
+    height: 0.5rem;
+    background-color: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    position: relative;
+    z-index: 1005;
+}
+  
+.song-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #09c275, #70e078);
+    border-radius: 0.5rem;
+}
+  
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+  
+.time span {
+    font-size: 1.2rem;
+    color: #a8a9ab;
+}
+  
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.play-pause {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.8),
+      -0.8rem -0.8rem 2rem -0.1rem rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+  
+.player-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+  
+.player-footer i {
+    font-size: 1.8rem;
+    color: white;
+}
+  
+.player-footer span {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* ---------- ---------- ---------- ---------- MUSIC PLAYER END  ---------- ---------- ---------- ---------- */
+
+.right-column .box2{
+    background: linear-gradient(
+        45deg, #4158D0 0%, 
+        #C850C0 20%, #eaa82f 100%);
+    background-size: 200% 200% ;
+    animation: animate-bg 5s infinite ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;  
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 3rem;
+    margin-top: 10px;
+    margin-bottom: 1vh;
+}
+
+.box2 h1 {
+    color: white;
+    font-family: 'Moonlight Sonata';
+    letter-spacing: 3px;
+    font-size: 50px;
+    opacity: 0;
+    animation: fadeInOut 40s linear infinite; /* Adjusted duration to 8 seconds */
+    position: absolute;
+    margin: 10px;
+}
+  
+.box2 h1:nth-child(1) {
+    animation-delay: 0s; /* Adjusted delay to fit within the 8-second duration */
+}
+  
+.box2 h1:nth-child(2) {
+    animation-delay: 10s;
+}
+  
+.box2 h1:nth-child(3) {
+    animation-delay: 20s; /* Adjusted delay to fit within the 8-second duration */
+}
+  
+.box2 h1:nth-child(4) {
+    animation-delay: 30s; /* Adjusted delay to fit within the 8-second duration */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
+
+  
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10%, 25% {
+      opacity: 1;
+    }
+    35%, 100% {
+      opacity: 0;
+    }
+}
+/* ---------- ---------- ----------  CONTAINER END ---------- ---------- ---------- */
+/* ---------- ---------- ----------  CONTAINER END ---------- ---------- ---------- */
+/* ---------- ---------- ----------  CONTAINER END ---------- ---------- ---------- */
+/* ---------- ---------- ----------  CONTAINER END ---------- ---------- ---------- */
+/* ---------- ---------- ----------  CONTAINER END ---------- ---------- ---------- */
+
+#progress{
+    position: fixed;
+    /*background-color: #194eb9;*/
+    z-index: 1002;
+    bottom: 60px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    color: #1d002c;
+    cursor: pointer;
+}
+
+#progress-value{
+    display: block;
+    height: calc(100%-12px);
+    width: calc(100%-12px);
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+
+@media screen and (min-width: 1344px) and (max-width: 1920px) {
+/* Paralax a */
+#welcome-message {
+    position: fixed;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1001; /* Set a higher z-index value to ensure it appears on top */
+    font-size: 25px;
+    text-align: center;
+}
+  
+#welcome-message h1{
+    font-family: 'Moonlight Sonata';
+    font-size: 100px;
+    color: #12f7ff;
+    text-shadow: 4px 4px 0px #1d002c;
+}
+  
+@font-face {
+    font-family: 'Moonlight Sonata';
+    src: url('MoonlightSonata-axrmx.ttf') format('truetype');
+}
+
+.about .info-box{
+    top: 0%;
+    left: 13%;
+    width: 52%;
+    padding: 20px;
+}
+
+.activities h2{
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.act-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+    border: 2px solid #12f7ff;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    transition: all .4s ease;
+    z-index: 1003;
+}
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-7px);
+    background-color: #12f7ff;
+    color: #1d002c;
+}
+
+.card img{
+    width:150px;
+    height: 150px;   
+    margin-top: -4rem;
+    filter: drop-shadow(0 0 0.5rem #1797ff);
+}
+
+.card .price-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width for consistency */
+}
+
+.info{
+    padding-bottom: .5rem;
+    text-align: center; /* Center text within the card */
+}
+
+.info h3{
+    font-size: 1rem;
+}
+
+.info p{
+    /* padding: .5rem 0 1.5rem 0; */
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+}
+
+.info .btn{
+    display: block;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 0.5rem #1d002c;
+}
+
+.price-name span{
+    color: #04cf37;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.left-column, .main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* .left-column {
+    margin-left: 5vw;
+} */
+
+.aboutme{
+    border-radius: 10px;
+    width: 200px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.indented-text{
+    width: 200px;
+}
+  
+.indented-text li {
+    color: none;
+    color: var(--font-color);
+    margin-bottom: 5px; /* Optional: Adds some space between the list items */
+}
+  
+.sidepic{
+    width: 200px;
+    height: auto;
+}
+
+
+.main p{
+    margin:10px;
+    padding-left: 10px;
+    padding: 10px;
+    color: none;
+    color: var(--font-color);
+    background: none;
+    background-color: var(--box-color);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    max-width: 700px;
+}
+
+.landscape-container {
+    width: 100vw; /* Set the desired width for the landscape container */
+    height: 500px; /* Set the desired height for the landscape container */
+    overflow: hidden;
+    border-radius: 20px;
+    max-width: 700px;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, 0%);
+}
+
+.fakeimg {
+    width: 700px;
+}
+
+.right-column .box1{
+    width: 25rem;
+    height: 45rem;
+}
+
+.player {
+    width: 25rem;
+    height: 45rem;
+}
+
+.right-column .box2{
+    width: 25rem;
+    height: 45rem;
+}
+
+}

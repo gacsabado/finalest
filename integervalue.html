@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Operations</title>
+  <link rel="stylesheet" href="navforjs.css">
+  <link rel="stylesheet" href="sidenav.css">
+  <link rel="stylesheet" href="integervalue.css">
+</head>
+<body>
+  <header id="header">
+    <a href="index.html" class="logo"><img src="addulogo.png"></a>
+    <ul class="navlist">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="activities.html">Activities</a></li>
+    </ul>
+  </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="sabadocelsius.html" id="sabadocelsius">Simple Computations in Javascript</a>
+    <a href="tax.html" id="tax">Income Tax Calculator Program</a>
+    <a href="integervalue.html" id="integervalue">Nth Factorial, Sum and Average</a>
+    <a href="simplepayroll.html" id="payroll">Simple Payroll</a>
+  </div>
+
+  <div id="container">
+    <label for="numberInput">Enter a positive integer (n): </label>
+    <input type="number" id="numberInput" placeholder="Enter n">
+    <button onclick="calculateResults()">Calculate</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function calculateResults() {
+      const n = parseInt(document.getElementById('numberInput').value);
+      const outputElement = document.getElementById('output');
+
+      if (isNaN(n) || n < 1) {
+        outputElement.textContent = 'Please enter a valid positive integer.';
+        return;
+      }
+
+      // Calculate nth factorial using a While Loop
+      let factorial = 1;
+      let i = 1;
+      while (i <= n) {
+        factorial *= i;
+        i++;
+      }
+
+      // Calculate the sum of the first n numbers using a Do While Loop
+      let sum = 0;
+      let j = 1;
+      do {
+        sum += j;
+        j++;
+      } while (j <= n);
+
+      // Calculate the average of the first n numbers using a For Loop
+      let total = 0;
+      for (let k = 1; k <= n; k++) {
+        total += k;
+      }
+      const average = total / n;
+
+      // Display the results
+      outputElement.innerHTML = `
+        <p>Factorial of ${n}: ${factorial}</p>
+        <p>Sum of the first ${n} numbers: ${sum}</p>
+        <p>Average of the first ${n} numbers: ${average.toFixed(2)}</p>
+      `;
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #1d002c 40%, #D65DB1 70%, #c788e7 80%);
+    background-size: 400% 400%;
+    animation: animate-bg 15s infinite ease-in-out;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+@keyframes animate-bg {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.con1 {
+    margin-top: 20vh; /* You can adjust this margin as needed */
+    /* Remove margin-left and margin-right */
+}
+
+.con2 {
+    margin-top: 2%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1350px;
+    height: auto;
+    max-height: 500px;
+    overflow: hidden; /* Hide overflow from con2 */
+    padding: 50px;
+    overflow-y: auto; /* Enable vertical scrolling within the scrollable-content */
+}
+
+/* Add the following styles to center .con1 and .con2 horizontally */
+.con1,
+.con2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h2{
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.pform{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 500px;
+    height: auto;
+    padding: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+/* Style for the delete all inputs modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 70vw;
+    border-radius: 2rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

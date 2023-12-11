@@ -1,0 +1,71 @@
+#mySidenav a {
+  position: absolute;
+  margin-top: 10%;
+  left: -20vw;
+  transition: 0.3s;
+  padding: 20px;
+  width: 25vw;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#sabadocelsius{
+  top: 20px;
+  background-color: #3498db;
+}
+
+#sabadocelsius:hover{
+    top: 20px;
+    background-color: #e74c3c;
+  }
+
+#tax {
+  top: 110px;
+  background-color: #3498db;
+}
+
+#tax:hover {
+    top: 110px;
+    background-color: #27ae60; 
+  }
+
+#integervalue{
+  top: 200px;
+  background-color: #3498db;
+}
+
+#integervalue:hover{
+  top: 200px;
+  background-color: #f39c12;
+}
+
+#payroll {
+  top: 290px;
+  background-color: #3498db;
+}
+
+#payroll:hover {
+  top: 290px;
+  background-color: #8e44ad;
+}
+
+@media screen and (min-width: 1344px) and (max-width: 1920px) {
+  #mySidenav a {
+    position: absolute;
+    margin-top: 10%;
+    left: -25vw;
+    transition: 0.3s;
+    padding: 20px;
+    width: 30vw;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+}

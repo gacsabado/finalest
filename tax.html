@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Calculator</title>
+  <link rel="stylesheet" href="navforjs.css">
+  <link rel="stylesheet" href="sidenav.css">
+  <link rel="stylesheet" href="tax.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <a href="index.html" class="logo"><img src="addulogo.png"></a>
+    <ul class="navlist">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="activities.html">Activities</a></li>
+    </ul>
+  </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="sabadocelsius.html" id="sabadocelsius">Simple Computations in Javascript</a>
+    <a href="tax.html" id="tax">Income Tax Calculator Program</a>
+    <a href="integervalue.html" id="integervalue">Nth Factorial, Sum and Average</a>
+    <a href="simplepayroll.html" id="payroll">Simple Payroll</a>
+  </div>
+
+  <div class="container">
+    <table border="1">
+      <tr>
+        <th>Over (P)</th>
+        <th>But Not Over (P)</th>
+        <th>Taxable Income</th>
+        <th>Basic Tax + Rate</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>P250,000</td>
+        <td>P180,000.00</td>
+        <td>0%</td>
+        <td>P0.00</td>
+      </tr>
+      <tr>
+        <td>P250,000</td>
+        <td>P400,000</td>
+        <td>P320,000.00</td>
+        <td>20% of the excess over P250,000</td>
+        <td>P14,000.00</td>
+      </tr>
+      <tr>
+        <td>P400,000</td>
+        <td>P800,000</td>
+        <td>P520,000.00</td>
+        <td>P30,000 + 25% of the excess over P400,000</td>
+        <td>P60,000.00</td>
+      </tr>
+      <tr>
+        <td>P800,000</td>
+        <td>P2,000,000</td>
+        <td>P930,000.00</td>
+        <td>P130,000 + 30% of the excess over P800,000</td>
+        <td>P169,000.00</td>
+      </tr>
+      <tr>
+        <td>P2,000,000</td>
+        <td>P8,000,000</td>
+        <td>P2,400,000.00</td>
+        <td>P490,000 + 32% of the excess over P2,000,000</td>
+        <td>P618,000.00</td>
+      </tr>
+      <tr>
+        <td>P8,000,000</td>
+        <td>-</td>
+        <td>P10,000,000.00</td>
+        <td>P2,410,000 + 35% of the excess over P8,000,000</td>
+        <td>P3,110,000.00</td>
+      </tr>
+    </table>
+
+    <br>
+
+    <label for="incomeInput">Enter Taxable Income (P): </label>
+    <input type="number" id="incomeInput" placeholder="Enter taxable income">
+    <button onclick="calculateIncomeTax()">Compute Income Tax</button>
+
+    <p id="result"></p>
+  </div>
+    
+
+  <script>
+    function calculateIncomeTax() {
+      const incomeInput = document.getElementById('incomeInput').value;
+      const resultElement = document.getElementById('result');
+
+      if (incomeInput < 0) {
+        resultElement.textContent = 'Invalid input. Please enter a positive value.';
+        return;
+      }
+
+      // Perform the income tax calculation based on the provided table
+      let incomeTax;
+
+      if (incomeInput <= 250000) {
+        incomeTax = 0;
+      } else if (incomeInput <= 400000) {
+        incomeTax = 180000 + 0.2 * (incomeInput - 250000);
+      } else if (incomeInput <= 800000) {
+        incomeTax = 320000 + 0.25 * (incomeInput - 400000);
+      } else if (incomeInput <= 2000000) {
+        incomeTax = 520000 + 0.3 * (incomeInput - 800000);
+      } else if (incomeInput <= 8000000) {
+        incomeTax = 930000 + 0.32 * (incomeInput - 2000000);
+      } else {
+        incomeTax = 2410000 + 0.35 * (incomeInput - 8000000);
+      }
+
+      resultElement.textContent = `Income Tax: P${formatNumber(incomeTax.toFixed(2))}`;
+    }
+
+    function formatNumber(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  </script>
+
+</body>
+</html>
